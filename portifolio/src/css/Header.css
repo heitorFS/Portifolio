@@ -2,9 +2,12 @@
     padding: 0 2vw;
     background-color: #333;
     height: 15vh;
+    min-height: 100px;
     display: grid;
     grid-template-columns: auto auto;
     color: #FFF;
+    font-family: 'Georgia Sans Light';
+    font-size: 16pt;
 }
 
 .header > div {
@@ -17,15 +20,13 @@
 }
 
 .header-button {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 1vw
+    margin: 0 1vw;
+    transition: ease-in-out 250ms;
 }
 
 .header-button:hover {
-    transform: scale(1.15);
+    transform: scale(1.2);
+    transition: ease-in-out 250ms;
 }
 
 .header-link {

@@ -2,11 +2,11 @@ import React from "react";
 
 const HeaderLink = ({ to, children }) => {
     return (
-        <div className="header-button">
-            <a className="header-link" href={`/#${to}`}>
+        <a className="header-link" href={`/#${to}`}>
+            <div className="header-button">
                 {children}
-            </a>
-        </div>
+            </div>
+        </a>
     )
 };
 

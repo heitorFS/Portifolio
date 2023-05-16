@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Georgia Sans Light';
+    src: url('../fonts/GeosansLight.ttf');
+}
+
+html {
+    background-color: #222;
+}
+
+.flex {
+    display: flex;
+}

@@ -1,0 +1,8 @@
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    padding: 6vh 4vw;
+}
