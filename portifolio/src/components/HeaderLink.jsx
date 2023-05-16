@@ -3,7 +3,9 @@ import React from "react";
 const HeaderLink = ({ to, children }) => {
     return (
         <div className="header-button">
-            {children}
+            <a className="header-link" href={`/#${to}`}>
+                {children}
+            </a>
         </div>
     )
 };

@@ -1,13 +1,34 @@
 .header {
+    padding: 0 2vw;
     background-color: #333;
-    width: 100%;
-    height: 20vh;
+    height: 15vh;
     display: grid;
     grid-template-columns: auto auto;
+    color: #FFF;
+}
+
+.header > div {
+    display: flex;
+    align-items:center;
 }
 
 .header-commands {
     justify-self: end;
+}
+
+.header-button {
+    height: 100%;
     display: flex;
-    align-items:center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1vw
+}
+
+.header-button:hover {
+    transform: scale(1.15);
+}
+
+.header-link {
+    text-decoration: none;
+    color: inherit;
 }
