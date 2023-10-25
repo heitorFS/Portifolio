@@ -3,8 +3,17 @@
     src: url('../fonts/GeosansLight.ttf');
 }
 
+@font-face {
+    font-family: 'Robots Revenge';
+    src: url('../fonts/Robots\ Revenge\ Italic.ttf');
+}
+
 html {
-    background-color: #222;
+    background-color: #0c0c0c;
+}
+
+html, body, #root {
+    height: 100%;
 }
 
 .flex {
