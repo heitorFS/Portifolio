@@ -1,0 +1,25 @@
+.not-found-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.not-found-bomb {
+    font-size: 20vw;
+}
+
+.not-found-text {
+    display: flex;
+    flex-direction: column;   
+    padding-left: 5vw;
+    font-size: 1.3vw; 
+}
+
+.not-found-title {
+    font-weight: 700;
+    font-size: 2.5vw;
+    margin-bottom: 2vh;
+}
