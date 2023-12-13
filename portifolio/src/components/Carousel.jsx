@@ -1,8 +1,8 @@
 import React from "react";
 
-const Carousel = ({ children }) => {
+const Carousel = ({ children, id }) => {
     return (
-        <div className="carousel">
+        <div id={id} className="carousel">
             {children}
         </div>
     )
