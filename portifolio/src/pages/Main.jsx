@@ -31,7 +31,7 @@ const Main = () => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          if (entry.target.classList.contains('skill-container'))  
+          if (entry.target.classList.contains('skill'))  
             if (entry.target.classList[1] !== 'loaded') {
               (function loop(i) {
                 setTimeout(function () {
@@ -50,7 +50,7 @@ const Main = () => {
     });
     
     useEffect(() => {
-      document.querySelectorAll('.skill-container').forEach(skill => {
+      document.querySelectorAll('.skill').forEach(skill => {
         observer.observe(skill);
       });
 
@@ -71,12 +71,12 @@ const Main = () => {
         </Section>
         <Section id="Skills" carouselId='skillsCarousel' secDesc={'Overview of my skills and years practising them.'} fade onCarouselChange={onCarouselChange}>
           <Carousel id='skillsCarousel'>
-            <Skill id='React' percentage={90} />
-            <Skill id='JS' percentage={85} />
-            <Skill id='CSS' percentage={85} />
-            <Skill id='HTML' percentage={85} />
-            <Skill id='C#' percentage={70} />
-            <Skill id='C++' percentage={50} />
+            <Skill id='React' percentage={90} workingSince={new Date(2023, 0, 10)} projectCount={120} />
+            <Skill id='JS' percentage={85} workingSince={new Date(2021, 8, 10)} projectCount={120} />
+            <Skill id='CSS' percentage={85} workingSince={new Date(2021, 8, 10)} projectCount={120} />
+            <Skill id='HTML' percentage={85} workingSince={new Date(2021, 8, 10)} projectCount={120} />
+            <Skill id='C#' percentage={70} workingSince={new Date(2021, 8, 10)} projectCount={120} />
+            <Skill id='C++' percentage={50} workingSince={new Date(2021, 8, 10)} projectCount={120} />
           </Carousel>
         </Section>
         <Section id="Experience">

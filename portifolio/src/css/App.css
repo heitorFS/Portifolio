@@ -203,11 +203,16 @@ h1, h2 {
   left: calc(37% + 26vw);
   background: linear-gradient(90deg, rgba(221,220,226,0) 0%, rgba(12, 12, 12, 1) 90%);
   z-index: 2;
+  pointer-events: none;
 }
 
 /* SKILL-BALL */
 
 .skill-container {
+  position: relative;
+}
+
+.skill {
   width: 10vw;
   height: 10vw;
   border-radius: 50%;
@@ -217,11 +222,7 @@ h1, h2 {
   margin-right: 60px;
 }
 
-.skill-container:hover {  
-  transform: scale(1.15);
-}
-
-.skill {
+.skill-content {
   width: 9vw;
   height: 9vw;
   border-radius: 50%;
@@ -231,9 +232,39 @@ h1, h2 {
   justify-content: center;
   font-size: 24pt;
   font-weight: 600;
+  transition: 200ms;
 }
 
-.skill:hover {
+.skill:hover + .skill-details {
+  opacity: 1;
+}
+
+.skill:hover .skill-content {
+  background-color: #202020;
+  transition: 200ms;
+}
+
+.skill-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  opacity: 0;
+  transition: 400ms;
+
+  position: absolute;
+  left: calc(100% - 80px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 15px;
+  padding: 20px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.skill-details-val {
+  text-align: right;
 }
 
 /* PROJECT-CARD */
