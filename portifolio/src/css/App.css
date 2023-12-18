@@ -302,6 +302,13 @@ h1, h2 {
 }
 
 .award {
+  font-size: 20pt;
+  background: rgb(20, 204, 221);
+  background: linear-gradient(135deg, rgb(195, 40, 216) 0%, rgb(20, 204, 221) 100%);
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
   z-index: 2;
   margin-left: 10px;
 }

@@ -2,7 +2,6 @@ import React from "react";
 
 const Skill = ({ id, percentage, workingSince, projectCount }) => {
     const monthDiff = (d1) => {
-        debugger;
         var months, years, today = new Date();
         years = today.getFullYear() - d1.getFullYear();
         if (years > 0)

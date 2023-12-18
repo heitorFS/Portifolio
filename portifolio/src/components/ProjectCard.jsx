@@ -1,5 +1,3 @@
-import { faAward } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const ProjectCard = ({ title, description, awards = [] }) => {
@@ -10,7 +8,7 @@ const ProjectCard = ({ title, description, awards = [] }) => {
                 <div className="awards">{awards.length !== 0 ? awards.map((award) => {
                     return (
                         <>
-                            <FontAwesomeIcon className="award" icon={faAward} style={{color: '#DA3', fontSize: '20pt'}} />
+                            <i class="fa-solid fa-award award"></i>
                             <div className="award-description">{award}</div>
                         </>
                     )
