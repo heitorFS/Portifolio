@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import ProjectCard from '../components/ProjectCard';
 import Carousel from '../components/Carousel';
 import Skill from "../components/Skill";
+import Experience from "../components/Experience";
 
 const Main = () => {
     const [carIndex, setCarIndex] = useState({
@@ -35,7 +36,7 @@ const Main = () => {
             if (entry.target.classList[1] !== 'loaded') {
               (function loop(i) {
                 setTimeout(function () {
-                  entry.target.style.background = `conic-gradient(transparent ${i}%, #141414 ${i}%), linear-gradient(135deg, rgba(119,30,131,1) 0%, rgba(17,157,169,1) 100%)`;
+                  entry.target.style.background = `conic-gradient(transparent ${i}%, #141414 ${i}%), linear-gradient(135deg, rgb(195, 40, 216) 0%, rgb(20, 204, 221) 100%)`;
                   if (++i < entry.target.dataset.fill)
                     loop(i);
                 }, 10);
@@ -63,9 +64,9 @@ const Main = () => {
   
     return (
       <>
-        <Section id="Start">
+        <div id="Start">
           <StartPage />
-        </Section>
+        </div>
         <Section id="Biography">
   
         </Section>
@@ -79,8 +80,11 @@ const Main = () => {
             <Skill id='C++' percentage={50} workingSince={new Date(2021, 8, 10)} projectCount={120} />
           </Carousel>
         </Section>
-        <Section id="Experience">
-  
+        <Section id="Experience" cardGrid>
+          <Experience name="Synergroup" picture="sng" startDate="17/05/2021" endDate="25/02/2022" role="Web developer" skills={['C#', 'HTML', 'JS', 'CSS']} />
+          <Experience name="Automalógica" picture="automalogica" />
+          <Experience name="Workverse" picture="workverse" />
+          <Experience name="AEnSolar" picture="AEnSolar" />
         </Section>
         <Section id="Projects" more carouselId='projectsCarousel' secDesc={'A showcase of my favourite and most important projects'} fade onCarouselChange={onCarouselChange}>
           <Carousel id='projectsCarousel'>

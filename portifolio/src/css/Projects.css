@@ -1,0 +1,136 @@
+.projects-grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    padding: 20px;
+}
+
+.projects-goback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: solid 1px #FFF;
+}
+
+.projects-container {
+    padding: 0 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.project {
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    transition: 200ms;
+}
+
+.project-info-container {
+    position: relative;
+    bottom: 70px;
+}
+
+.project-image {
+    display: flex;
+    position: relative;
+    right: 0;
+    transition: 200ms;
+}
+
+.project-image > img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(80%);
+    transition: 200ms;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.project:hover .project-image > img {    
+    filter: brightness(100%);
+}
+
+.project-info {
+    clip-path:polygon(0 -5%, 100% 0, 100% 100%, -3% 100%);
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+    font-size: 12pt;
+}
+
+.project-info-tab {
+    clip-path: polygon(60% 0, 100% 105%, 0 105%, -3% 0);
+    height: 20px;
+    width: 250px;
+}
+
+.project-offset::before {    
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: linear-gradient(135deg, rgb(171, 35, 235) 0%, rgb(38, 191, 202) 100%);
+}
+
+.project-info-tab::before {
+    bottom: -10px;
+}
+
+.project-info-text {
+    position: absolute;
+    bottom: 10px;
+    left: 5px
+}
+
+.project-title {
+    font-size: 16pt;
+    font-weight: 600;
+}
+
+.project-offset-container {
+    margin-bottom: 10px;
+}
+
+.project-info-main {
+    position: absolute;
+    width: 100%;
+    bottom: -5px;
+
+}
+
+.project-info-tab,
+.project-info {
+    background-color: #222;
+}
+
+.project-modal {
+    display: none;
+}
+
+.project-modal:nth-child(2) {
+    display: block !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 500px;
+    width: 50vw;
+    height: 80%;
+    background-color: #000;
+    border-radius: 5vh;
+    z-index: 3;
+}
+
+.project-big-carousel {
+    width: 100%;
+    padding: 1vw;
+    margin: auto;
+}

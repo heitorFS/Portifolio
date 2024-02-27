@@ -8,7 +8,7 @@ const ProjectCard = ({ title, description, awards = [] }) => {
                 <div className="awards">{awards.length !== 0 ? awards.map((award) => {
                     return (
                         <>
-                            <i class="fa-solid fa-award award"></i>
+                            <i className="fa-solid fa-award award"></i>
                             <div className="award-description">{award}</div>
                         </>
                     )

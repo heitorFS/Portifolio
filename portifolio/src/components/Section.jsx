@@ -4,10 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { useNavigate } from "react-router-dom";
 
-const Section = ({ id, children, secDesc = null, fade = false, more = false, onCarouselChange = null, carouselId = null }) => {
+const Section = ({ id, children, secDesc = null, fade = false, more = false, onCarouselChange = null, carouselId = null, cardGrid = false }) => {
     const navigate = useNavigate();
     return (
-        <div id={id} className={`section ${secDesc != null ? 'section-divide' : ''}`}>
+        <div id={id} className={`section ${secDesc != null ? 'section-divide' : cardGrid ? 'section-card-grid' : ''}`}>
             {secDesc != null ? (
                 <>
                     <div className="section-description">
@@ -23,7 +23,7 @@ const Section = ({ id, children, secDesc = null, fade = false, more = false, onC
                     </div>
                 </>
             ) : (
-                <div>{children}</div>
+                <>{children}</>
             )}
         
             {fade ? <div className="overlay-fade"></div> : ''}
