@@ -1,6 +1,5 @@
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import Carousel from "./Carousel";
 
 const Project = ({ children, title, shortDesc }) => {
     let right = 0;
@@ -8,7 +7,6 @@ const Project = ({ children, title, shortDesc }) => {
     const mouseEnter = (e) => {
         var images = e.currentTarget.children[0];
         timerId = setInterval(function () {
-            debugger;
             right += 500;
             images.style.right = (right % images.scrollWidth) + 'px';
         }, 1000);
@@ -41,9 +39,9 @@ const Project = ({ children, title, shortDesc }) => {
             </div>
             <div className="project-modal">
                 <div className="project-big-carousel">
-                    {children}
-                    <div className="project-arrow"><FontAwesomeIcon icon={faAngleRight} /></div>
-                    <div className="project-arrow"><FontAwesomeIcon icon={faAngleLeft} /></div>
+                    <Carousel>
+                        {children}
+                    </Carousel>
                 </div>
             </div>
         </>

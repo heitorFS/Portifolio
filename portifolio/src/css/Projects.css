@@ -130,7 +130,41 @@
 }
 
 .project-big-carousel {
-    width: 100%;
-    padding: 1vw;
-    margin: auto;
+    position: relative;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.project-modal-image {
+    width: max(40vw, 400px);
+}
+
+.images-container {  
+    display: flex;
+    position: relative;
+    right: 0;
+    width: 38vw;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.images-container > img {
+    width: 38vw;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.project-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.project-arrow.arrow-left {
+    left: 10%;
+}
+
+.project-arrow.arrow-right {
+    left: 90%;
+    transform: translateX(-100%);
 }

@@ -3,32 +3,13 @@ import '../css/App.css';
 
 import Section from '../components/Section';
 import StartPage from '../components/StartPage';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import ProjectCard from '../components/ProjectCard';
 import Carousel from '../components/Carousel';
 import Skill from "../components/Skill";
 import Experience from "../components/Experience";
 
-const Main = () => {
-    const [carIndex, setCarIndex] = useState({
-      skillsCarousel: 1,
-      projectsCarousel: 1
-    });
-  
-    const onCarouselChange = (e) => {      
-      const carousel = document.getElementById(e.currentTarget.dataset.carousel);
-      const style = getComputedStyle(carousel.children[0]);
-
-      var updateValue = {};
-      updateValue[e.currentTarget.dataset.carousel] = carIndex[e.currentTarget.dataset.carousel] + 1;
-      setCarIndex(prevCarIndex => ({
-        ...prevCarIndex,
-        ...updateValue
-      }));
-
-      carousel.style.left = `-${(parseInt(style.marginRight.replace('px', '')) + carousel.children[0].offsetWidth) * (carIndex[e.currentTarget.dataset.carousel] % carousel.children.length)}px`;
-    }
-  
+const Main = () => {  
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -70,8 +51,8 @@ const Main = () => {
         <Section id="Biography">
   
         </Section>
-        <Section id="Skills" carouselId='skillsCarousel' secDesc={'Overview of my skills and years practising them.'} fade onCarouselChange={onCarouselChange}>
-          <Carousel id='skillsCarousel'>
+        <Section id="Skills" secDesc={'Overview of my skills and years practising them.'} fade>
+          <Carousel id='skillsCarousel' noLeftArrow insideArrow infinite>
             <Skill id='React' percentage={90} workingSince={new Date(2023, 0, 10)} projectCount={120} />
             <Skill id='JS' percentage={85} workingSince={new Date(2021, 8, 10)} projectCount={120} />
             <Skill id='CSS' percentage={85} workingSince={new Date(2021, 8, 10)} projectCount={120} />
@@ -86,8 +67,8 @@ const Main = () => {
           <Experience name="Workverse" picture="workverse" />
           <Experience name="AEnSolar" picture="AEnSolar" />
         </Section>
-        <Section id="Projects" more carouselId='projectsCarousel' secDesc={'A showcase of my favourite and most important projects'} fade onCarouselChange={onCarouselChange}>
-          <Carousel id='projectsCarousel'>
+        <Section id="Projects" more secDesc={'A showcase of my favourite and most important projects'} fade >
+          <Carousel id='projectsCarousel' noLeftArrow insideArrow infinite>
             <ProjectCard title='MoveStats' description='description still to be done' awards={['FEBRACE (Brazilian Science and Engineering Fair) 2021 Finalist', 'FEMIC (Scientific Initiation Fair of Minas) Participant']} />
             <ProjectCard title='Planner' description='description still to be done' />
             <ProjectCard title='Chat' description='description still to be done' />

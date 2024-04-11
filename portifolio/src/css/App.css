@@ -192,16 +192,40 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFF;
   z-index: 3;
   transition: 200ms;
+  border: none;
+  background-color: transparent;
 }
 
-.carousel-control:hover {
+.carousel-left {
+  filter: brightness(0.2);
+  transform: translate(-200%, -50%);
+}
+
+.carousel-left:hover {
   cursor: pointer !important;
-  transform: translateY(-50%) scale(1.25);
+  transform: translate(-200%, -50%) scale(1.25);
   transition: 200ms;
 }
 
 .carousel-right {
+  right: 0;
+  transform: translate(200%, -50%);
+}
+
+.carousel-right:hover {
+  cursor: pointer !important;
+  transform: translate(200%, -50%) scale(1.25);
+  transition: 200ms;
+}
+
+.carousel-right-in {
   right: 3vw;
+}
+
+.carousel-right-in:hover {
+  cursor: pointer !important;
+  transform: translateY(-50%) scale(1.25);
+  transition: 200ms;
 }
 
 .overlay-fade {  
