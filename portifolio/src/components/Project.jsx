@@ -1,7 +1,6 @@
 import React from "react";
-import Carousel from "./Carousel";
 
-const Project = ({ children, title, shortDesc }) => {
+const Project = ({ children, title, shortDesc, projectClick }) => {
     let right = 0;
     let timerId = 0;
     const mouseEnter = (e) => {
@@ -12,13 +11,13 @@ const Project = ({ children, title, shortDesc }) => {
         }, 1000);
     }
     
-    const mouseLeave = (e) => {
-        clearInterval(timerId)
+    const mouseLeave = () => {
+        clearInterval(timerId);
     }
 
     return (
-        <>
-            <div className="project" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
+        <div className="project-container">
+            <div className="project" onClick={() => projectClick(children, title, shortDesc)} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
                 <div className="project-image">
                     {children}
                 </div>
@@ -37,14 +36,7 @@ const Project = ({ children, title, shortDesc }) => {
                     </div>
                 </div>
             </div>
-            <div className="project-modal">
-                <div className="project-big-carousel">
-                    <Carousel>
-                        {children}
-                    </Carousel>
-                </div>
-            </div>
-        </>
+        </div>
     );
 };
 
