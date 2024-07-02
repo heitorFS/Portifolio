@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useImperativeHandle, forwardRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
-const Carousel = ({ children, id = 'projectModalCarousel', noRightArrow = false, noLeftArrow = false, insideArrow = false, infinite = false }) => {
+const Carousel = forwardRef(({ children, id = 'projectModalCarousel', noRightArrow = false, noLeftArrow = false, insideArrow = false, infinite = false }, ref) => {
     const [carIndex, setCarIndex] = useState(0);
     const [target, setTarget] = useState();
     const [enabledArrows, setEnabledArrows] = useState([!infinite ? true : false, false]);
@@ -11,6 +11,12 @@ const Carousel = ({ children, id = 'projectModalCarousel', noRightArrow = false,
       setTarget(e.currentTarget.parentElement.children[1]);
       setCarIndex(prevCarIndex => prevCarIndex + (1 * ident));
     }
+
+    useImperativeHandle(ref, () => ({
+      setCarouselIndex(val) {
+        setCarIndex(val);
+      }
+    }));
 
     useEffect(() => {
       if (!target)
@@ -49,6 +55,6 @@ const Carousel = ({ children, id = 'projectModalCarousel', noRightArrow = false,
           </div>
         </>
     )
-};
+});
 
 export default Carousel;

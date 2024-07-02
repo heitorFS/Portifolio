@@ -67,6 +67,12 @@
 .tags::-webkit-scrollbar {
     height: 0.1vw;
     margin: 10px;
+    transition: 200ms;
+}
+
+.tags:hover::-webkit-scrollbar {
+    height: 0.2vw;
+    transition: 200ms;
 }
 
 .tags::-webkit-scrollbar-track {
@@ -76,7 +82,7 @@
 ::-webkit-scrollbar-thumb {
     background: #666;
     border-radius: 10px;
-  }
+}
 
 .tag {
     padding: 1px 7px;
@@ -117,11 +123,12 @@
     height: 300px;
     overflow: hidden;
     transition: 200ms;
+    margin-bottom: 3vh;
 }
 
 .project-info-container {
     position: relative;
-    bottom: 70px;
+    bottom: 85px;
 }
 
 .project-image {
@@ -129,6 +136,7 @@
     position: relative;
     right: 0;
     transition: 200ms;
+    height: 100%;
 }
 
 .project-image > img {
@@ -248,11 +256,20 @@
 .project-big-carousel {
     position: relative;
     width: 80%;
+    height: 22vw;
     margin: 30px auto;
 }
 
+.project-modal-image-container {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0; 
+}
+
 .project-modal-image {
-    width: max(40vw, 400px);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .images-container {  

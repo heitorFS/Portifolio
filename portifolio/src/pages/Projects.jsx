@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import '../css/Projects.css';
 import Project from "../components/Project";
 import Tags from "../components/Tags";
@@ -13,6 +13,7 @@ const Projects = () => {
     const [tagsSelected, setTagsSelected] = useState([]);
     const [search, setSearch] = useState('');
     const navigate = useNavigate();
+    const carouselRef = useRef();
 
     const switchTag = (tag) => {
         if (tagsSelected.includes(tag))
@@ -34,7 +35,8 @@ const Projects = () => {
 
         let images = '';
         for (let image in children) {
-            images += '<img class="project-modal-image" src="' + children[image].props.src + '" alt="o" />';
+            debugger;
+            images += '<div class="project-modal-image-container"><img class="project-modal-image" src="' + children[image].props.children.props.src + '" alt="Project image" /></div>';
         }
         modal.children[1].children[0].children[1].innerHTML = images;
         
@@ -45,6 +47,7 @@ const Projects = () => {
     }
 
     const modalCloseClick = (e) => {
+        carouselRef.current.setCarouselIndex(0);
         let overlay = document.getElementById('projects-overlay');
         overlay.style.opacity = '0';
         let modal = e.currentTarget.parentElement.parentElement;
@@ -77,6 +80,7 @@ const Projects = () => {
                             <Tags switchTag={switchTag} name="CSS" />
                             <Tags switchTag={switchTag} name="Entity Framework" />
                             <Tags switchTag={switchTag} name="Firebase" />
+                            <Tags switchTag={switchTag} name="Google APIs" />
                             <Tags switchTag={switchTag} name="HTML" />
                             <Tags switchTag={switchTag} name="Java" />  
                             <Tags switchTag={switchTag} name="Javascript" />
@@ -102,7 +106,7 @@ const Projects = () => {
                                 return (
                                     <Project title={element.title} shortDesc={element.shortDesc} projectClick={projectClick}>
                                         {element.images.map((image) => {
-                                            return (<img className="project-modal-image" src={require(`../media/projects/${image.src}`)} alt={image.alt} />)
+                                            return (<div className="project-modal-image-container"><img className="project-modal-image" src={require(`../media/projects/${image.src}`)} alt={image.alt} /></div>)
                                         })}
                                     </Project>
                                 );
@@ -116,7 +120,7 @@ const Projects = () => {
                     <button className="project-modal-close" onClick={modalCloseClick}>✖</button>
                 </div>
                 <div className="project-big-carousel">
-                    <Carousel>
+                    <Carousel ref={carouselRef}>
                         <img className="project-modal-image" src={require('../media/projects/Chat01.png')} alt="o" />
                         <img className="project-modal-image" src={require('../media/projects/Chat01.png')} alt="o" />
                         <img className="project-modal-image" src={require('../media/projects/Chat01.png')} alt="o" />

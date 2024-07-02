@@ -18,7 +18,6 @@
                 }
             ],
             "tags": [
-                "Firebase",
                 "React",
                 "Javascript",
                 "HTML",
@@ -26,76 +25,82 @@
             ]
         },
         {
-            "title": "Chat",
-            "shortDesc": "Firebase based application",
+            "title": "MoveStats",
+            "shortDesc": "Visually impaired people auxiliating app",
             "images": [
                 {
-                    "src": "ChatThumb.png",
-                    "alt": "Chat thumbnail"
+                    "src": "MoveStatsThumb.png",
+                    "alt": "MoveStats thumbnail"
                 },
                 {
-                    "src": "Chat01.png",
-                    "alt": "Chat 01"
+                    "src": "MoveStats01.png",
+                    "alt": "MoveStats 01"
                 },
                 {
-                    "src": "Chat02.png",
-                    "alt": "Chat 02"
+                    "src": "MoveStats02.png",
+                    "alt": "MoveStats 02"
+                },
+                {
+                    "src": "MoveStats03.png",
+                    "alt": "MoveStats 03"
                 }
             ],
             "tags": [
-                "Firebase",
-                "React",
-                "Javascript",
-                "HTML",
-                "CSS"
+                "Java",
+                "React Native",
+                "Google APIs"
             ]
         },
         {
-            "title": "Chat",
-            "shortDesc": "Firebase based application",
+            "title": "Audire",
+            "shortDesc": "Accounting assistance website",
             "images": [
                 {
-                    "src": "ChatThumb.png",
-                    "alt": "Chat thumbnail"
+                    "src": "AudireThumb.png",
+                    "alt": "Audire thumbnail"
                 },
                 {
-                    "src": "Chat01.png",
-                    "alt": "Chat 01"
+                    "src": "Audire01.png",
+                    "alt": "Audire 01"
                 },
                 {
-                    "src": "Chat02.png",
-                    "alt": "Chat 02"
+                    "src": "Audire02.png",
+                    "alt": "Audire 02"
                 }
             ],
             "tags": [
-                "React",
-                "Javascript",
+                ".NET",
+                ".NET MVC",
+                "C#",
+                "Entity Framework",
                 "HTML",
-                "CSS"
+                "Javascript",
+                "SQL",
+                "SSMS"
             ]
         },
         {
-            "title": "Naega",
-            "shortDesc": "Firebase based application",
+            "title": "Fontcash",
+            "shortDesc": "Commissions manager for corporations",
             "images": [
                 {
-                    "src": "ChatThumb.png",
-                    "alt": "Chat thumbnail"
+                    "src": "FontcashThumb.png",
+                    "alt": "Fontcash thumbnail"
                 },
                 {
-                    "src": "Chat01.png",
-                    "alt": "Chat 01"
-                },
-                {
-                    "src": "Chat02.png",
-                    "alt": "Chat 02"
+                    "src": "Fontcash01.png",
+                    "alt": "Fontcash 01"
                 }
             ],
             "tags": [
-                "Firebase",
-                "Javascript",
+                ".NET",
+                ".NET MVC",
+                "C#",
+                "Entity Framework",
                 "HTML",
-                "CSS"
+                "Javascript",
+                "SQL",
+                "SSMS"
             ]
         }
     ]
