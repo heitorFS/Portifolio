@@ -17,7 +17,7 @@ const Section = ({ id, children, secDesc = null, fade = false, more = false, car
                             <h1>{t(id)}</h1>
                             <p>{secDesc}</p>
                         </div>
-                        {more ? <div className="section-more" onClick={() => {navigate('/projects')}}>{t('SeeMore') + ' ' + t(id).toLowerCase()}&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRightLong} /></div> : ''}
+                        {more ? <div className="section-more" onClick={() => {navigate('/Portifolio/projects')}}>{t('SeeMore') + ' ' + t(id).toLowerCase()}&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRightLong} /></div> : ''}
                     </div>
                     {children}
                 </>

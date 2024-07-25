@@ -73,7 +73,7 @@ const Projects = () => {
         <>
             <div className="projects-grid">
                 <div className="projects-goback">
-                    <FontAwesomeIcon icon={faAngleLeft} style={{cursor: 'pointer'}} onClick={() => navigate('/')} />
+                    <FontAwesomeIcon icon={faAngleLeft} style={{cursor: 'pointer'}} onClick={() => navigate('/Portifolio/')} />
                 </div>
                 <div className="projects">
                     <div className="project-search">
