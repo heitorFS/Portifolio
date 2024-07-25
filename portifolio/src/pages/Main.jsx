@@ -107,8 +107,8 @@ const Main = () => {
         </Carousel>
       </Section>
       <Section id="Footer">
-        <div data-animation="animate__slideInLeft" className="animate__animated animate__faster">
-            Heitor Silva
+        <div data-animation="animate__slideInLeft footer" className="animate__animated animate__faster">
+            <center>Developed by Heitor Silva<br /><a href="mailto:heitor.freitassilva@outlook.com" style={{textDecoration: 'none', color: '#FFF'}}>heitor.freitassilva@outlook.com</a><br />+55 (11) 92006-9376</center>
         </div>
       </Section>
     </>

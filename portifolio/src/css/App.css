@@ -470,6 +470,10 @@ h1, h2, h3, h4, h5, h6 {
   transition: 400ms;
 }
 
+.footer {
+  font-size: 18pt;
+}
+
 /* MOBILE */
 
 @media only screen and (max-width: 600px) {
