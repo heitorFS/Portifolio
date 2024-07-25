@@ -1,0 +1,52 @@
+{
+    "Language": "Language",
+    "Portuguese": "Portuguese",
+    "English": "English",
+    "Start": "Start",
+    "Biography": "Biography",
+    "Experience": "Experience",
+    "Projects": "Projects",
+    "Skills": "Skills",
+    "BiographyText": "I've been studying programming since I was 11, as this has always been one of my many desires (didn't know at the time programming would be such a nice fit for me). Introduced to it by my father since I was just a kid, programming was what came to mind when first thinking of what job I wanted to have for the future, so since I was 14, I used to help my father with his software problems at his startup. Fast-forward a year, and as soon as legal I went for a job as a Web Developer, and although I switched to SCADA Development for almost a year, I never intend to leave programming as a career. Unknowing the skills I needed in order to be a better professional, I couldn't understand what I should study at first, but as soon as I started at my job, I discovered how to keep an eye out for new technologies and develop my skills, which led me to several courses of HTML, CSS, JS, C# and React! Throughout my carrer, I look towards building a great skills repertoire, and being the most helpful I can for the team, knowing that as long as I program, I will have a great time!",
+    "SkillsText": "Overview of my skills and years practising them",
+    "Years": "years",
+    "StartDate": "Start Date",
+    "EndDate": "End Date",
+    "Role": "Role",
+    "ProjectsText": "A showcase of my favourite and most important projects",
+    "SeeMore": "See more",
+    "FEBRACE": "FEBRACE (Brazilian Science and Engineering Fair) 2021 Finalist",
+    "FEMIC": "FEMIC (Scientific Initiation Fair of Minas) Participant 2021",
+
+    
+    "ProjectsAdding": "Projects are still being added. Come back later for more",
+    "ProjectSearchPlaceHolder": "Type project name",
+
+    "Chat": "Chat",
+    "ChatShortDesc": "Firebase based application",
+    "ChatLongDesc": "Chatting app made with ReactJS and Firebase. This project was essentially developed aiming a growth of my ReactJS capabilities, while also learning the basics about Firebase. It took just over three weeks for it to be completed.",
+
+    "MoveStats": "MoveStats",
+    "MoveStatsShortDesc": "Visually impaired people auxiliating app",
+    "MoveStatsLongDesc": "App developed in high school. Made to assist trips of people who are visually impaired — developed with Google Maps API, the application describes the street around the user, signing them to all types of establishments needed, configured before using the app.\nThe app had great repercussion and was a finalist at FEBRACE (Brazilian Science and Engineering Fair) 2021, as well as being a participant at FEMIC (Scientific Initiation Fair of Minas Gerais) 2021.\nThe application began its development in JAVA, aiming to be compatible with as many devices as possible, but it was completed with React Native.",
+
+    "Audire": "Audire",
+    "AudireShortDesc": "Accounting assistance website",
+    "AudireLongDesc": "Website developed to constantly monitor data about each client of a corporation on federal and statal governaments websites.\nThe project was developd with .NET MVC and EntityFramework.\nI was responsable for the creation of multiple screens and simpler functions of the website.",
+
+    "Fontcash": "Fontcash",
+    "FontcashShortDesc": "Commissions manager for corporations",
+    "FontcashLongDesc": "Website developed to manage commissions of a corporations employees.\nThe project was developd with .NET MVC and EntityFramework.\nI was responsable for the creation of multiple screens and simpler functions of the website.",
+
+    "Underpressure": "Under pressure",
+    "UnderpressureShortDesc": "Game for the Pixel Jam 2023",
+    "UnderpressureLongDesc": "Developed in just 11 days, Under pressure was a game developed for Pixel Jam 2023.\nAll game content was made with Unity (coding), Aseprite (art), Audacity (audio) and Ableton (music).\nThe game tells the story of Caíque, a young indigenous man who goes on an underwater adventure to save his village from a flood. With the help of Kururu, a ghost frog, he explores the ruins of a sunken city to find the solution to the flood.",
+
+    "Overview": "Solar system monitoring",
+    "OverviewShortDesc": "Website for monitoring a solar system installations",
+    "OverviewLongDesc": "Website developed to monitor multiple solar panels installations of a corporation.\n The project made with ReactJS maede requests to get data about daily, monthly and yearly generations of the installation, displyaing the information on cards on the screen.",
+
+    "WaterPumping": "Water pumps monitoring",
+    "WaterPumpingShortDesc": "App to monitor water pumps data",
+    "WaterPumpingLongDesc": "Project developed with Arduino to monitor water pumps.\nThe website uses the ESP8266WiFi library to create a newtork, which the user has to connect to be able to load the website. It displays the voltage, current, power, and frequency of the connected water pump."
+}

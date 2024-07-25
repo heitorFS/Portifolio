@@ -1,6 +1,6 @@
 import React from "react";
 
-const Project = ({ children, title, shortDesc, projectClick }) => {
+const Project = ({ children, title, shortDesc, longDesc, projectClick }) => {
     let right = 0;
     let timerId = 0;
     const mouseEnter = (e) => {
@@ -17,7 +17,7 @@ const Project = ({ children, title, shortDesc, projectClick }) => {
 
     return (
         <div className="project-container">
-            <div className="project" onClick={() => projectClick(children, title, shortDesc)} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
+            <div className="project" onClick={() => projectClick(children, title, longDesc)} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
                 <div className="project-image">
                     {children}
                 </div>

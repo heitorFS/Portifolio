@@ -1,0 +1,52 @@
+{
+    "Language": "Idioma",
+    "Portuguese": "Português",
+    "English": "Inglês",
+    "Start": "Início",
+    "Biography": "Biografia",
+    "Experience": "Experiência",
+    "Projects": "Projetos",
+    "Skills": "Habilidades",
+    "BiographyText": "Estudo programação desde os 11 anos, o que sempre foi um dos meus muitos desejos (naquele tempo, não sabia que a programação seria uma opção tão boa para mim). Introduzida pelo meu pai desde criança, a programação foi o que me veio à cabeça quando pensei pela primeira vez no trabalho que queria ter no futuro, por isso, desde os 14 anos, costumava ajudar o meu pai com os problemas de software na sua empresa. Um ano mais tarde, assim que tinha idade suficiente, fui trabalhar como programador Web e, apesar de ter mudado para o desenvolvimento SCADA durante quase um ano, nunca considerei deixar a programação como carreira. Sem saber as habilidades que precisava para ser um profissional melhor, não conseguia entender o que deveria estudar no início, mas assim que comecei no meu trabalho, descobri como ficar de olho em novas tecnologias e desenvolver minhas habilidades, o que me levou a vários cursos de HTML, CSS, JS, C# e React. Ao longo da minha carreira, procuro construir um grande repertório de competências e ser o mais útil possível para a equipe, sabendo que, enquanto programar, irei me divertir!",
+    "SkillsText": "Visão geral de minhas habilidades e experiência com elas",
+    "Years": "anos",
+    "StartDate": "Data de início",
+    "EndDate": "Data de saída",
+    "Role": "Função",
+    "ProjectsText": "Amostras dos meus projetos mais importantes",
+    "SeeMore": "Ver mais",
+    "FEBRACE": "Finalista da FEBRACE (Feira Brasileira de Ciências e Engenharia) 2021",
+    "FEMIC": "Participante da FEMIC (Feira de Iniciação Ciêntifica de Minas) 2021",
+    
+
+    "ProjectsAdding": "Projetos ainda estão sendo adicionados. Volte mais tarde para ver mais",
+    "ProjectSearchPlaceHolder": "Digite o nome do projeto",
+
+    "Chat": "Conversas",
+    "ChatShortDesc": "Website de conversas feito com firebase",
+    "ChatLongDesc": "Chatting app made with ReactJS and Firebase. This project was essentially developed aiming a growth of my ReactJS capabilities, while also learning the basics about Firebase. It took just over three weeks for it to be completed.",
+
+    "MoveStats": "MoveStats",
+    "MoveStatsShortDesc": "App para auxílio de deficientes visuais",
+    "MoveStatsLongDesc": "Aplicativo desenvolvido no ensino médio. Feito para auxiliar na locomoção de pessoas visualmente desamparadas — desenvolvido com a API de mapas da google, o aplicativo descreve a rua em volta do usuário, alertando-o sobre todos os tipos de estabelecimentos que o mesmo configurar antes de utilizar o app.\nO app teve grande repercussão e foi finalista da FEBRACE (Feira Brasileira de Ciências e Engenharia) 2021, além de participante da FEMIC (Feira de Iniciação Ciêntifica de Minas) 2021.\nO aplicativo teve o início de seu desenvolvimento em JAVA, visando ser compatível com o máximo de dispositivos possível, porém foi concluído com React Native.",
+
+    "Audire": "Audire",
+    "AudireShortDesc": "Website de auxílio com contabilidade",
+    "AudireLongDesc": "Website desenvolvido para realizar o monitoramento constante de informações de cada CNPJ dos clientes de uma empresa nos portais do governo federal (eCAC Receita Federal) e estadual (DEC Sefaz SP).\nO projeto foi desenvolvido com .NET MVC e EntityFramework.\nNa equipe, fui responsável pela criação de múltiplas telas e funções mais simples do projeto.",
+    
+    "Fontcash": "Fontcash",
+    "FontcashShortDesc": "Gestor de comissões",
+    "FontcashLongDesc": "Website desenvolvido para realizar a gestão de comissões dos funcionários de uma empresa.\nO projeto foi desenvolvido com .NET MVC e EntityFramework.\nNa equipe, fui responsável pela criação de múltiplas telas e funções mais simples do projeto.",
+
+    "Underpressure": "Under pressure",
+    "UnderpressureShortDesc": "Jogo feito para a Pixel Jam 2023",
+    "UnderpressureLongDesc": "Desenvolvido em apenas 11 dias, Under pressure foi um jogo desenvolvido para a Pixel Jam 2023.\nTodo conteúdo do jogo foi feito com Unity (desenvolvimento), Aseprite (arte), Audacity (áudio) e Ableton (música).\nO jogo acompanha a história de Caíque, um jovem indígena que sai numa aventura submarina para salvar sua aldeia de uma inundação. Com a ajuda de Kururu, um sapo fantasma, ele explora as ruínas de uma cidade submersa para encontrar a solução para a inundação.",
+    
+    "Overview": "Monitoramento sistema solar",
+    "OverviewShortDesc": "Website de monitoramento de instalações solares",
+    "OverviewLongDesc": "Website desenvolvido para o monitoramento de múltiplas instalações de painéis solares de uma empresa.\nO projeto desenvolvido com ReactJS fazia requisições para obter dados de geração no dia, mês e ano de cada instalação, exibindo essas informações em cards na tela.",
+
+    "WaterPumping": "Monitoramento bombas d'água",
+    "WaterPumpingShortDesc": "Aplicativo de monitoramento de bombas d'água",
+    "WaterPumpingLongDesc": "Programa desenvolvido com Arduino para o monitoramento de bombas d'água.\nO projeto utilizava a biblioteca ESP8266WiFi.h para criar uma rede cujo o usuário deveria conectar, assim possibilitando a visualização da tensão, corrente, potência, e frequência atuais da bomba conectada."
+}

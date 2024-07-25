@@ -3,11 +3,28 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import i18n from 'i18next';
+import { I18nextProvider } from 'react-i18next';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+i18n.init({
+  interpolation: { escapeValue: false },
+  lng: 'pt',
+  resources: {
+    pt: {
+      translation: require('./localization/pt.json')
+    },
+    en: {
+      translation: require('./localization/en.json')
+    }
+  }
+});
+
 root.render(
   <React.StrictMode>
-    <App />
+    <I18nextProvider i18n={i18n}>
+      <App />
+    </I18nextProvider>
   </React.StrictMode>
 );
 

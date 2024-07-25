@@ -2,7 +2,6 @@
     "projects": [
         {
             "title": "Chat",
-            "shortDesc": "Firebase based application",
             "images": [
                 {
                     "src": "ChatThumb.png",
@@ -21,12 +20,12 @@
                 "React",
                 "Javascript",
                 "HTML",
+                "Firebase",
                 "CSS"
             ]
         },
         {
             "title": "MoveStats",
-            "shortDesc": "Visually impaired people auxiliating app",
             "images": [
                 {
                     "src": "MoveStatsThumb.png",
@@ -53,7 +52,6 @@
         },
         {
             "title": "Audire",
-            "shortDesc": "Accounting assistance website",
             "images": [
                 {
                     "src": "AudireThumb.png",
@@ -81,7 +79,6 @@
         },
         {
             "title": "Fontcash",
-            "shortDesc": "Commissions manager for corporations",
             "images": [
                 {
                     "src": "FontcashThumb.png",
@@ -101,6 +98,83 @@
                 "Javascript",
                 "SQL",
                 "SSMS"
+            ]
+        },
+        {
+            "title": "Underpressure",
+            "images": [
+                {
+                    "src": "UnderpressureThumb.png",
+                    "alt": "Underpressure thumbnail"
+                },
+                {
+                    "src": "Underpressure01.png",
+                    "alt": "Underpressure 01"
+                },
+                {
+                    "src": "Underpressure02.png",
+                    "alt": "Underpressure 01"
+                },
+                {
+                    "src": "Underpressure03.png",
+                    "alt": "Underpressure 01"
+                }
+            ],
+            "tags": [
+                "Aseprite",
+                "C#",
+                "Unity"
+            ]
+        },
+        {
+            "title": "Overview",
+            "images": [
+                {
+                    "src": "OverviewThumb.png",
+                    "alt": "Solar system monitoring thumbnail"
+                },
+                {
+                    "src": "Overview01.png",
+                    "alt": "Solar system monitoring 01"
+                },
+                {
+                    "src": "Overview02.png",
+                    "alt": "Solar system monitoring 01"
+                }
+            ],
+            "tags": [
+                "React",
+                "Javascript",
+                "HTML",
+                "CSS"
+            ]
+        },
+        {
+            "title": "WaterPumping",
+            "images": [
+                {
+                    "src": "WaterPumpingThumb.jpg",
+                    "alt": "Water pumps monitoring thumbnail"
+                },
+                {
+                    "src": "WaterPumping01.jpg",
+                    "alt": "Water pumps monitoring 01"
+                },
+                {
+                    "src": "WaterPumping02.jpg",
+                    "alt": "Water pumps monitoring 02"
+                },
+                {
+                    "src": "WaterPumping03.jpg",
+                    "alt": "Water pumps monitoring 03"
+                }
+            ],
+            "tags": [
+                "Javascript",
+                "HTML",
+                "CSS",
+                "C++",
+                "Arduino"
             ]
         }
     ]

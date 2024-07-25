@@ -8,81 +8,111 @@ import ProjectCard from '../components/ProjectCard';
 import Carousel from '../components/Carousel';
 import Skill from "../components/Skill";
 import Experience from "../components/Experience";
+import { useTranslation } from "react-i18next";
 
 const Main = () => {  
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          if (entry.target.classList.contains('skill'))  
-            if (entry.target.classList[1] !== 'loaded') {
-              (function loop(i) {
-                setTimeout(function () {
-                  entry.target.style.background = `conic-gradient(transparent ${i}%, #141414 ${i}%), linear-gradient(135deg, rgb(195, 40, 216) 0%, rgb(20, 204, 221) 100%)`;
-                  if (++i < entry.target.dataset.fill)
-                    loop(i);
-                }, 10);
-              })(0);
-              entry.target.classList.add('loaded');
-            }
-            
-          else            
-            entry.target.classList.add(entry.target.dataset.animation);
-        }
-      });
+  const { i18n } = useTranslation();
+  const { t } = useTranslation();
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains('skill'))  
+          if (entry.target.classList[1] !== 'loaded') {
+            (function loop(i) {
+              setTimeout(function () {
+                entry.target.style.background = `conic-gradient(transparent ${i}%, #141414 ${i}%), linear-gradient(135deg, rgb(195, 40, 216) 0%, rgb(20, 204, 221) 100%)`;
+                if (++i < entry.target.dataset.fill)
+                  loop(i);
+              }, 10);
+            })(0);
+            entry.target.classList.add('loaded');
+          }
+          
+        else            
+          entry.target.classList.add(entry.target.dataset.animation);
+      }
     });
-    
-    useEffect(() => {
-      document.querySelectorAll('.skill').forEach(skill => {
-        observer.observe(skill);
-      });
-
-      document.querySelectorAll('.animate__animated').forEach(element => {
-        observer.observe(element);
-      });
-
-      // eslint-disable-next-line
-    }, [])
+  });
   
-    return (
-      <>
-        <div id="Start">
-          <StartPage />
+  useEffect(() => {
+    document.querySelectorAll('.skill').forEach(skill => {
+      observer.observe(skill);
+    });
+
+    document.querySelectorAll('.animate__animated').forEach(element => {
+      observer.observe(element);
+    });
+
+    // eslint-disable-next-line
+  }, [])
+
+  const _changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+  };
+
+  const switchLanguages = () => {
+    let menu = document.querySelector('.language-dropdown');
+    if (menu.style.maxHeight === '0px' || !menu.style.maxHeight) {
+      setTimeout(() => {menu.style.maxHeight = '500px'}, 1);
+    }
+    else {
+      setTimeout(() => {menu.style.maxHeight = '0px'}, 1);
+    }
+  };
+
+  return (
+    <>
+      <div className="change-language">
+        <div className="language-open" onClick={switchLanguages}>
+          {t('Language')} <i className="fa-solid fa-caret-down"></i>
         </div>
-        <Section id="Biography">
-  
-        </Section>
-        <Section id="Skills" secDesc={'Overview of my skills and years practising them.'} fade>
-          <Carousel id='skillsCarousel' noLeftArrow insideArrow infinite>
-            <Skill id='React' percentage={90} workingSince={new Date(2023, 0, 10)} projectCount={120} />
-            <Skill id='JS' percentage={85} workingSince={new Date(2021, 8, 10)} projectCount={120} />
-            <Skill id='CSS' percentage={85} workingSince={new Date(2021, 8, 10)} projectCount={120} />
-            <Skill id='HTML' percentage={85} workingSince={new Date(2021, 8, 10)} projectCount={120} />
-            <Skill id='C#' percentage={70} workingSince={new Date(2021, 8, 10)} projectCount={120} />
-            <Skill id='C++' percentage={50} workingSince={new Date(2021, 8, 10)} projectCount={120} />
-          </Carousel>
-        </Section>
-        <Section id="Experience" cardGrid>
-          <Experience name="Synergroup" picture="sng" startDate="17/05/2021" endDate="25/02/2022" role="Web developer" skills={['C#', 'HTML', 'JS', 'CSS']} />
-          <Experience name="Automalógica" picture="automalogica" />
-          <Experience name="Workverse" picture="workverse" />
-          <Experience name="AEnSolar" picture="AEnSolar" />
-        </Section>
-        <Section id="Projects" more secDesc={'A showcase of my favourite and most important projects'} fade >
-          <Carousel id='projectsCarousel' noLeftArrow insideArrow infinite>
-            <ProjectCard title='MoveStats' description='description still to be done' awards={['FEBRACE (Brazilian Science and Engineering Fair) 2021 Finalist', 'FEMIC (Scientific Initiation Fair of Minas) Participant']} />
-            <ProjectCard title='Planner' description='description still to be done' />
-            <ProjectCard title='Chat' description='description still to be done' />
-            <ProjectCard title='Solar system monitoring' description='description still to be done' />
-            <ProjectCard title='Audire' description='description still to be done' />
-          </Carousel>
-        </Section>
-        <Section id="Quotes">
-          <div data-animation="animate__slideInLeft" className="animate__animated animate__faster">
-              Heitor Silva
+        <div className="language-dropdown">
+          <div className="language-option" onClick={() => {_changeLanguage('pt')}}>
+            <img className={`language-button ${typeof i18n !== 'undefined' ? i18n.language === 'pt' || !i18n.language ? 'language-selected' : '' : ''}`} src={require('../media/flags/brazil.png')} alt="PT-BR" /> <div>{t('Portuguese')}</div>
           </div>
-        </Section>
-      </>
-    );
+          <div className="language-option" onClick={() => {_changeLanguage('en')}}>
+            <img className={`language-button ${typeof i18n !== 'undefined' ? i18n.language === 'en' ? 'language-selected' : '' : ''}`} src={require('../media/flags/united-kingdom.png')} alt="EN-UK" /> <div>{t('English')}</div>
+          </div>
+        </div>
+      </div>
+      <div id="Start">
+        <StartPage />
+      </div>
+      <Section id="Biography">
+        {t('BiographyText')}
+      </Section>
+      <Section id="Skills" secDesc={t('SkillsText')} fade>
+        <Carousel id='skillsCarousel' noLeftArrow insideArrow infinite>
+          <Skill id='React' percentage={90} years={2} />
+          <Skill id='JS' percentage={85} years={3} />
+          <Skill id='CSS' percentage={85} years={3} />
+          <Skill id='HTML' percentage={85} years={3} />
+          <Skill id='C#' percentage={70} years={2} />
+          <Skill id='C++' percentage={50} years={1} />
+          <Skill id='SQL' percentage={50} years={1} />
+        </Carousel>
+      </Section>
+      <Section id="Experience" cardGrid>
+        <Experience name="Synergroup" picture="sng" startDate="03/2021" endDate="02/2022" role="Web developer" skills={['C#', 'HTML', 'JS', 'CSS']} />
+        <Experience name="Automalógica" picture="automalogica" startDate="02/2022" endDate="12/2022" role="SCADA developer" skills={['Visual Basic', 'Python', 'Elipse E3']} />
+        <Experience name="Workverse" picture="workverse" startDate="02/2023" endDate="08/2023" role="Front-end developer" skills={['React', 'HTML', 'JS', 'CSS']} />
+        <Experience name="AEnSolar" picture="AEnSolar" startDate="10/2023" endDate="-" role="Software developer" skills={['C#', 'C++', 'HTML', 'JS', 'CSS']} />
+      </Section>
+      <Section id="Projects" more secDesc={t('ProjectsText')} fade >
+        <Carousel id='projectsCarousel' noLeftArrow insideArrow infinite>
+          <ProjectCard title={t('MoveStats')} description={t('MoveStatsShortDesc')} awards={[t('FEBRACE'), t('FEMIC')]} />
+          <ProjectCard title={t('Chat')} description={t('ChatShortDesc')} />
+          <ProjectCard title={t('Overview')} description={t('OverviewShortDesc')} />
+          <ProjectCard title={t('Audire')} description={t('AudireShortDesc')} />
+        </Carousel>
+      </Section>
+      <Section id="Footer">
+        <div data-animation="animate__slideInLeft" className="animate__animated animate__faster">
+            Heitor Silva
+        </div>
+      </Section>
+    </>
+  );
 };
 
 export default Main;

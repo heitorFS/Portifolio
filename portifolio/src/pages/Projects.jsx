@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import '../css/Projects.css';
 import Project from "../components/Project";
 import Tags from "../components/Tags";
@@ -8,12 +8,23 @@ import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
+    const { t } = useTranslation();
     const [tagsSelected, setTagsSelected] = useState([]);
     const [search, setSearch] = useState('');
     const navigate = useNavigate();
     const carouselRef = useRef();
+
+    useEffect(() => {
+        let param = new URLSearchParams(window.location.search).get('project');
+        if (!!param)
+        {
+            setSearch(param);
+            document.querySelector('.search-input').value = param;
+        }
+    }, []);
 
     const switchTag = (tag) => {
         if (tagsSelected.includes(tag))
@@ -27,7 +38,7 @@ const Projects = () => {
         return projects;
     }
 
-    const projectClick = (children, title, shortDesc) => {
+    const projectClick = (children, title, longDesc) => {
         let overlay = document.getElementById('projects-overlay');
         overlay.style.display = 'block';
         let modal = document.querySelector('.project-modal');
@@ -35,10 +46,10 @@ const Projects = () => {
 
         let images = '';
         for (let image in children) {
-            debugger;
             images += '<div class="project-modal-image-container"><img class="project-modal-image" src="' + children[image].props.children.props.src + '" alt="Project image" /></div>';
         }
         modal.children[1].children[0].children[1].innerHTML = images;
+        document.querySelector('.project-modal-description').textContent = longDesc;
         
         setTimeout(() => {
             overlay.style.opacity = '.6';
@@ -67,14 +78,14 @@ const Projects = () => {
                 <div className="projects">
                     <div className="project-search">
                         <div className="search-input-container">
-                            <input className="search-input" onChange={(e) => {setSearch(e.target.value)}} placeholder="Type project name" />
+                            <input className="search-input" onChange={(e) => {setSearch(e.target.value)}} placeholder={t("ProjectSearchPlaceHolder")} />
                         </div>
                         <div className="tags">
                             <Tags switchTag={switchTag} name=".NET" />
                             <Tags switchTag={switchTag} name=".NET MVC" />
+                            <Tags switchTag={switchTag} name="Arduino" />
                             <Tags switchTag={switchTag} name="Aseprite" />
                             <Tags switchTag={switchTag} name="Blender" />
-                            <Tags switchTag={switchTag} name="C" />
                             <Tags switchTag={switchTag} name="C#" />
                             <Tags switchTag={switchTag} name="C++" />
                             <Tags switchTag={switchTag} name="CSS" />
@@ -101,10 +112,10 @@ const Projects = () => {
                             getProjects().projects.filter(project => {
                                 return tagsSelected.length === 0 ? true : tagsSelected.every(tag => project.tags.includes(tag));
                             }).filter(project => {
-                                return project.title.length === 0 ? true : project.title.toLowerCase().includes(search.toLowerCase());
+                                return project.title.length === 0 ? true : t(project.title).toLowerCase().includes(search.toLowerCase());
                             }).map((element) => {
                                 return (
-                                    <Project title={element.title} shortDesc={element.shortDesc} projectClick={projectClick}>
+                                    <Project title={t(element.title)} shortDesc={t(element.title + 'ShortDesc')} longDesc={t(element.title + 'LongDesc')} projectClick={projectClick}>
                                         {element.images.map((image) => {
                                             return (<div className="project-modal-image-container"><img className="project-modal-image" src={require(`../media/projects/${image.src}`)} alt={image.alt} /></div>)
                                         })}
@@ -113,6 +124,8 @@ const Projects = () => {
                             })
                         }
                     </div>
+                    <hr style={{width: '90%'}} />
+                    <center><div className="projects-alert">{t('ProjectsAdding')}</div></center>
                 </div>
             </div>
             <div className="project-modal project-modal-hide">
@@ -126,8 +139,9 @@ const Projects = () => {
                         <img className="project-modal-image" src={require('../media/projects/Chat01.png')} alt="o" />
                     </Carousel>
                 </div>
+                <hr style={{width: '90%', borderColor: '#444', marginTop: '10px', marginBottom: '50px'}} />
                 <div className="project-modal-description">
-                    
+                Chatting app made with ReactJS and Firebase. This project was essentially developed aiming a growth of my ReactJS capabilities, while also learning the basics about Firebase. It took just over three weeks for it to be completed.
                 </div>
             </div>
             <div id="projects-overlay"></div>

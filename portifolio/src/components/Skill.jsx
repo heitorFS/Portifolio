@@ -1,27 +1,16 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-const Skill = ({ id, percentage, workingSince, projectCount }) => {
-    const monthDiff = (d1) => {
-        var months, years, today = new Date();
-        years = today.getFullYear() - d1.getFullYear();
-        if (years > 0)
-            return years + ' years';
-
-        months = years * 12 - d1.getMonth();
-        months += today.getMonth();
-        return months + ' months';
-    }
-
+const Skill = ({ id, percentage, years, projectCount }) => {
+    const { t } = useTranslation();
     return (
         <div className="skill-container">
             <div data-fill={percentage} className="skill">
                 <div className="skill-content">{id}</div>
             </div>
             <div className="skill-details">
-                <div className="skill-details-col">Experience:</div>
-                <div className="skill-details-val">{monthDiff(workingSince)}</div>
-                <div className="skill-details-col">Project count:</div>
-                <div className="skill-details-val">{projectCount}</div>
+                <div className="skill-details-col">{t('Experience')}:</div>
+                <div className="skill-details-val">{years + ' ' + t('Years')}</div>
             </div>
         </div>
     );

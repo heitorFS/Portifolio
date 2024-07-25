@@ -15,10 +15,11 @@ const Carousel = forwardRef(({ children, id = 'projectModalCarousel', noRightArr
     useImperativeHandle(ref, () => ({
       setCarouselIndex(val) {
         setCarIndex(val);
+        document.querySelector('.carousel-right').style.filter = 'brightness(1)';
       }
     }));
 
-    useEffect(() => {
+    useEffect(() => {  
       if (!target)
         return;
 
@@ -41,7 +42,6 @@ const Carousel = forwardRef(({ children, id = 'projectModalCarousel', noRightArr
           setEnabledArrows(prevVal => prevVal = [false, false]);
         }
       }
-
       // eslint-disable-next-line
     }, [carIndex]);
     return (
