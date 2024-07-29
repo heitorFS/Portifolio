@@ -510,6 +510,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 20px;
   }
 
+  .header-link:hover {
+    cursor: pointer;
+  }
+
   .header {
     position: fixed;
     z-index: 2;
