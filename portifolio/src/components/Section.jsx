@@ -9,24 +9,26 @@ const Section = ({ id, children, secDesc = null, fade = false, more = false, car
     const navigate = useNavigate();
     const { t } = useTranslation();
     return (
-        <div id={id} className={`section ${secDesc != null ? 'section-divide' : cardGrid ? 'section-card-grid' : ''}`}>
-            {secDesc != null ? (
-                <>
-                    <div className="section-description">
-                        <div>
-                            <h1>{t(id)}</h1>
-                            <p>{secDesc}</p>
+        <a name={id}>
+            <div id={id} className={`section ${secDesc != null ? 'section-divide' : cardGrid ? 'section-card-grid' : ''}`}>
+                {secDesc != null ? (
+                    <>
+                        <div className="section-description">
+                            <div>
+                                <h1>{t(id)}</h1>
+                                <p>{secDesc}</p>
+                            </div>
+                            {more ? <div className="section-more" onClick={() => {navigate('/Portifolio/projects')}}>{t('SeeMore') + ' ' + t(id).toLowerCase()}&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRightLong} /></div> : ''}
                         </div>
-                        {more ? <div className="section-more" onClick={() => {navigate('/Portifolio/projects')}}>{t('SeeMore') + ' ' + t(id).toLowerCase()}&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRightLong} /></div> : ''}
-                    </div>
-                    {children}
-                </>
-            ) : (
-                <>{children}</>
-            )}
-        
-            {fade ? <div className="overlay-fade"></div> : ''}
-        </div>
+                        {children}
+                    </>
+                ) : (
+                    <>{children}</>
+                )}
+            
+                {fade ? <div className="overlay-fade"></div> : ''}
+            </div>
+        </a>
     );
 };
 
