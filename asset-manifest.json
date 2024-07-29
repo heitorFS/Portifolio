@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Portifolio/static/css/main.27f3f311.css",
+    "main.css": "/Portifolio/static/css/main.fa2174f6.css",
     "main.js": "/Portifolio/static/js/main.7cecd5a4.js",
     "static/js/787.be55e6d0.chunk.js": "/Portifolio/static/js/787.be55e6d0.chunk.js",
     "static/media/StartBackground.jpeg": "/Portifolio/static/media/StartBackground.dbc66551a0246eb25dfa.jpeg",
@@ -34,12 +34,12 @@
     "static/media/AEnSolar.png": "/Portifolio/static/media/AEnSolar.7ba59aac3c9f4dacdb22.png",
     "static/media/Robots Revenge Italic.ttf": "/Portifolio/static/media/Robots Revenge Italic.5b54e9fced41687ff481.ttf",
     "index.html": "/Portifolio/index.html",
-    "main.27f3f311.css.map": "/Portifolio/static/css/main.27f3f311.css.map",
+    "main.fa2174f6.css.map": "/Portifolio/static/css/main.fa2174f6.css.map",
     "main.7cecd5a4.js.map": "/Portifolio/static/js/main.7cecd5a4.js.map",
     "787.be55e6d0.chunk.js.map": "/Portifolio/static/js/787.be55e6d0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.27f3f311.css",
+    "static/css/main.fa2174f6.css",
     "static/js/main.7cecd5a4.js"
   ]
 }
