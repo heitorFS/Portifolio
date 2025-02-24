@@ -1,11 +1,18 @@
 {
   "files": {
-    "main.css": "/Portifolio/static/css/main.fa2174f6.css",
-    "main.js": "/Portifolio/static/js/main.7cecd5a4.js",
+    "main.css": "/Portifolio/static/css/main.3a5a7147.css",
+    "main.js": "/Portifolio/static/js/main.2233d889.js",
     "static/js/787.be55e6d0.chunk.js": "/Portifolio/static/js/787.be55e6d0.chunk.js",
     "static/media/StartBackground.jpeg": "/Portifolio/static/media/StartBackground.dbc66551a0246eb25dfa.jpeg",
+    "static/media/Anna03.png": "/Portifolio/static/media/Anna03.5ec47d16c52ecfce1d75.png",
+    "static/media/Anna05.png": "/Portifolio/static/media/Anna05.153bf60527af940177f4.png",
+    "static/media/Anna06.png": "/Portifolio/static/media/Anna06.1d1d96416ee7153db6bd.png",
+    "static/media/Anna01.png": "/Portifolio/static/media/Anna01.b8ea77c1935ea22097ce.png",
     "static/media/UnderpressureThumb.png": "/Portifolio/static/media/UnderpressureThumb.116cf2eb508b17a391d3.png",
+    "static/media/Anna04.png": "/Portifolio/static/media/Anna04.0699d18edc16c6e3f64d.png",
+    "static/media/AnnaThumb.png": "/Portifolio/static/media/AnnaThumb.1294a14e51d018072de3.png",
     "static/media/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf": "/Portifolio/static/media/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.61b71ee93d55d9bddead.ttf",
+    "static/media/Anna02.png": "/Portifolio/static/media/Anna02.34c4bf7a4cac11396b0b.png",
     "static/media/Overview02.png": "/Portifolio/static/media/Overview02.ffbb9f8afdc9c726b39d.png",
     "static/media/OverviewThumb.png": "/Portifolio/static/media/OverviewThumb.5e77a9228e33173f9674.png",
     "static/media/MoveStats01.png": "/Portifolio/static/media/MoveStats01.192d05d09e2f338e9182.png",
@@ -25,6 +32,8 @@
     "static/media/MoveStatsThumb.png": "/Portifolio/static/media/MoveStatsThumb.c6921c6ce1891b44be96.png",
     "static/media/GeosansLight.ttf": "/Portifolio/static/media/GeosansLight.bc00520faeb56c4e3750.ttf",
     "static/media/Underpressure01.png": "/Portifolio/static/media/Underpressure01.0bc0576517a08352c6ad.png",
+    "static/media/Excel01.png": "/Portifolio/static/media/Excel01.50369ec7e77fd6c42a6f.png",
+    "static/media/ExcelThumb.png": "/Portifolio/static/media/ExcelThumb.aa1a978fc3a0aa3b82bc.png",
     "static/media/Underpressure03.png": "/Portifolio/static/media/Underpressure03.660a0a8b627724442db9.png",
     "static/media/Underpressure02.png": "/Portifolio/static/media/Underpressure02.f14743717c6063f25bb4.png",
     "static/media/united-kingdom.png": "/Portifolio/static/media/united-kingdom.508c63e133713ecb9fc7.png",
@@ -34,12 +43,12 @@
     "static/media/AEnSolar.png": "/Portifolio/static/media/AEnSolar.7ba59aac3c9f4dacdb22.png",
     "static/media/Robots Revenge Italic.ttf": "/Portifolio/static/media/Robots Revenge Italic.5b54e9fced41687ff481.ttf",
     "index.html": "/Portifolio/index.html",
-    "main.fa2174f6.css.map": "/Portifolio/static/css/main.fa2174f6.css.map",
-    "main.7cecd5a4.js.map": "/Portifolio/static/js/main.7cecd5a4.js.map",
+    "main.3a5a7147.css.map": "/Portifolio/static/css/main.3a5a7147.css.map",
+    "main.2233d889.js.map": "/Portifolio/static/js/main.2233d889.js.map",
     "787.be55e6d0.chunk.js.map": "/Portifolio/static/js/787.be55e6d0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa2174f6.css",
-    "static/js/main.7cecd5a4.js"
+    "static/css/main.3a5a7147.css",
+    "static/js/main.2233d889.js"
   ]
 }
